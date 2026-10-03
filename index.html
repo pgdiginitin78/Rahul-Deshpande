@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Rahul Deshpande | Private Archive Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { bg: "#0b0b0c", panel: "#141416", panel2: "#1b1b1e", gold: "#d6ae63", cream: "#f5efe5", muted: "#a7a5a0", line: "#2b2b2f", green: "#79c79b", red: "#e07878" } } } }</script>
     <style>
       :root {
         --bg: #0b0b0c;
@@ -42,21 +44,8 @@
       .app {
         min-height: 100vh;
       }
-      .login {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        background:
-          radial-gradient(circle at 25% 15%, #3b2917 0, transparent 28%),
-          linear-gradient(135deg, #080808, #111113 60%, #17120b);
-      }
-      .hero {
-        padding: 70px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-right: 1px solid #27231d;
-      }
+      .login { min-height: 100vh; background: radial-gradient(circle at 25% 15%, #3b2917 0, transparent 28%), linear-gradient(135deg, #080808, #111113 60%, #17120b); }
+      .hero { padding: 70px; display: flex; flex-direction: column; justify-content: space-between; }
       .brand {
         font-family: Georgia, serif;
         font-size: 28px;
@@ -151,19 +140,8 @@
         font-size: 12px;
         line-height: 1.7;
       }
-      .shell {
-        display: grid;
-        grid-template-columns: 245px 1fr;
-        min-height: 100vh;
-      }
-      .sidebar {
-        background: #101012;
-        border-right: 1px solid var(--line);
-        padding: 24px 18px;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-      }
+      .shell { min-height: 100vh; }
+      .sidebar { background: #101012; padding: 24px 18px; position: relative; }
       .sideBrand {
         font-family: Georgia, serif;
         font-size: 21px;
@@ -516,18 +494,10 @@
         color: white;
       }
       @media (max-width: 900px) {
-        .login {
-          grid-template-columns: 1fr;
-        }
-        .hero {
-          display: none;
-        }
-        .shell {
-          grid-template-columns: 1fr;
-        }
-        .sidebar {
-          display: none;
-        }
+        .login { min-height: 100vh; background: radial-gradient(circle at 25% 15%, #3b2917 0, transparent 28%), linear-gradient(135deg, #080808, #111113 60%, #17120b); }
+        .hero { padding: 70px; display: flex; flex-direction: column; justify-content: space-between; }
+        .shell { min-height: 100vh; }
+        .sidebar { background: #101012; padding: 24px 18px; position: relative; }
         .grid {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -553,13 +523,8 @@
         color: #25221e;
         background: var(--bg);
       }
-      body.light .shell {
-        background: #f5f3ef;
-      }
-      body.light .sidebar {
-        background: #fff;
-        border-color: #ded9d0;
-      }
+      body.light .shell { min-height: 100vh; }
+      body.light .sidebar { background: #101012; padding: 24px 18px; position: relative; }
       body.light .nav button {
         color: #66615a;
       }
@@ -626,15 +591,8 @@
         border-color: #ddd6cc;
         color: #68625a;
       }
-      body.light .login {
-        background:
-          radial-gradient(circle at 25% 15%, #f1dfbf 0, transparent 28%),
-          linear-gradient(135deg, #f8f5ef, #fff 60%, #f4eee4);
-        color: #25221e;
-      }
-      body.light .hero {
-        border-color: #ded5c7;
-      }
+      body.light .login { min-height: 100vh; background: radial-gradient(circle at 25% 15%, #3b2917 0, transparent 28%), linear-gradient(135deg, #080808, #111113 60%, #17120b); }
+      body.light .hero { padding: 70px; display: flex; flex-direction: column; justify-content: space-between; }
       body.light .hero p {
         color: #6b655c;
       }
@@ -1810,8 +1768,8 @@
     </style>
   </head>
   <body>
-    <div id="login" class="login">
-      <section class="hero">
+    <div id="login" class="login flex flex-col md:grid md:grid-cols-[1.15fr_0.85fr]">
+      <section class="hero md:border-r md:border-[#27231d]">
         <div class="brand">Rahul <span>Deshpande</span></div>
         <div>
           <div class="quote">Private Digital Archive</div>
@@ -1821,7 +1779,7 @@
             interviews, photographs and the stories behind them.
           </p>
         </div>
-        <div class="quote">Personal Archive • Secure • Private</div>
+        <div class="quote">Personal Archive â€¢ Secure â€¢ Private</div>
       </section>
       <section class="loginbox">
         <div class="card">
@@ -1907,35 +1865,35 @@
                 Selected Performances & Interviews
               </h2>
               <p style="color: #888; font-size: 12px">
-                3 items • Preview allowed • Download disabled
+                3 items â€¢ Preview allowed â€¢ Download disabled
               </p>
             </div>
             <span class="badge">Secure access</span>
           </div>
           <div class="shareFiles" style="margin-top: 20px">
             <div class="shareFile">
-              <div class="thumb">▶<span class="duration">01:42:18</span></div>
+              <div class="thumb">â–¶<span class="duration">01:42:18</span></div>
               <div>
-                Live Concert — Pune<br /><span style="color: #777"
-                  >Performance • 2025</span
+                Live Concert â€” Pune<br /><span style="color: #777"
+                  >Performance â€¢ 2025</span
                 >
               </div>
             </div>
             <div class="shareFile">
               <div class="thumb interview">
-                ◉<span class="duration">28:40</span>
+                â—‰<span class="duration">28:40</span>
               </div>
               <div>
                 Conversation on Classical Music<br /><span style="color: #777"
-                  >Interview • 2024</span
+                  >Interview â€¢ 2024</span
                 >
               </div>
             </div>
             <div class="shareFile">
-              <div class="thumb photo">✦</div>
+              <div class="thumb photo">âœ¦</div>
               <div>
                 Backstage Portrait Collection<br /><span style="color: #777"
-                  >Photography • 18 photos</span
+                  >Photography â€¢ 18 photos</span
                 >
               </div>
             </div>
@@ -1949,9 +1907,9 @@
     </div>
     <div class="switcher">
       <span class="themeToggle"
-        ><button id="darkThemeBtn" onclick="setTheme('dark')">☾ Dark</button
+        ><button id="darkThemeBtn" onclick="setTheme('dark')">â˜¾ Dark</button
         ><button id="lightThemeBtn" onclick="setTheme('light')">
-          ☀ Light
+          â˜€ Light
         </button></span
       >
       <button onclick="showLogin()">Login</button
@@ -1988,47 +1946,47 @@
       })();
 
       const media = [
-        ["Live Concert — Pune", "Performance • 2025", "▶", "01:42:18", ""],
+        ["Live Concert â€” Pune", "Performance â€¢ 2025", "â–¶", "01:42:18", ""],
         [
           "A Morning Raga Session",
-          "Music • Studio Recording",
-          "♫",
+          "Music â€¢ Studio Recording",
+          "â™«",
           "48:12",
           "",
         ],
         [
           "Conversation on Classical Music",
-          "Interview • 2024",
-          "◉",
+          "Interview â€¢ 2024",
+          "â—‰",
           "28:40",
           "interview",
         ],
         [
-          "Backstage — Vasantotsav",
-          "Photography • 2025",
-          "✦",
+          "Backstage â€” Vasantotsav",
+          "Photography â€¢ 2025",
+          "âœ¦",
           "36 photos",
           "photo",
         ],
-        ["Theatre & Natya Sangeet", "Performance Archive", "▶", "01:18:02", ""],
+        ["Theatre & Natya Sangeet", "Performance Archive", "â–¶", "01:18:02", ""],
         [
           "Studio Rehearsal Sessions",
           "Behind the Scenes",
-          "♫",
+          "â™«",
           "12 recordings",
           "",
         ],
         [
           "Career Conversation",
-          "Interview • Archive",
-          "◉",
+          "Interview â€¢ Archive",
+          "â—‰",
           "42:15",
           "interview",
         ],
         [
           "Press & Portraits",
-          "Photography • Collection",
-          "✦",
+          "Photography â€¢ Collection",
+          "âœ¦",
           "84 photos",
           "photo",
         ],
@@ -2072,36 +2030,36 @@
           .join("");
       }
       const reels = [
-        ["Riyaz — Morning Notes", "Practice • 2026", "00:42", "Practice"],
+        ["Riyaz â€” Morning Notes", "Practice â€¢ 2026", "00:42", "Practice"],
         [
           "Backstage Before the Concert",
-          "Behind the Scenes • 2026",
+          "Behind the Scenes â€¢ 2026",
           "00:31",
           "Backstage",
         ],
-        ["A Bandish in One Minute", "Music • 2026", "00:58", "Music"],
+        ["A Bandish in One Minute", "Music â€¢ 2026", "00:58", "Music"],
         [
           "Green Room Moments",
-          "Behind the Scenes • 2025",
+          "Behind the Scenes â€¢ 2025",
           "00:27",
           "Backstage",
         ],
-        ["Audience Request", "Live Moment • 2025", "00:49", "Concert"],
-        ["Theatre Rehearsal", "Natya Sangeet • 2025", "00:36", "Theatre"],
-        ["Soundcheck Diaries", "Concert Prep • 2025", "00:44", "Concert"],
+        ["Audience Request", "Live Moment â€¢ 2025", "00:49", "Concert"],
+        ["Theatre Rehearsal", "Natya Sangeet â€¢ 2025", "00:36", "Theatre"],
+        ["Soundcheck Diaries", "Concert Prep â€¢ 2025", "00:44", "Concert"],
         [
           "A Thought on Classical Music",
-          "Conversation • 2025",
+          "Conversation â€¢ 2025",
           "00:55",
           "Interview",
         ],
-        ["Travel to Performance", "Tour Diary • 2024", "00:29", "Travel"],
-        ["Studio Take — Uncut", "Studio • 2024", "00:51", "Studio"],
-        ["Festival Evening", "Performance • 2024", "00:46", "Concert"],
-        ["Archive Memory", "Throwback • 2023", "00:39", "Archive"],
-        ["Tanpura & Tea", "Personal Moment • 2026", "00:33", "Personal"],
-        ["Meet the Musicians", "People • 2025", "00:57", "People"],
-        ["One Minute Alaap", "Music • 2025", "00:59", "Music"],
+        ["Travel to Performance", "Tour Diary â€¢ 2024", "00:29", "Travel"],
+        ["Studio Take â€” Uncut", "Studio â€¢ 2024", "00:51", "Studio"],
+        ["Festival Evening", "Performance â€¢ 2024", "00:46", "Concert"],
+        ["Archive Memory", "Throwback â€¢ 2023", "00:39", "Archive"],
+        ["Tanpura & Tea", "Personal Moment â€¢ 2026", "00:33", "Personal"],
+        ["Meet the Musicians", "People â€¢ 2025", "00:57", "People"],
+        ["One Minute Alaap", "Music â€¢ 2025", "00:59", "Music"],
       ];
       let selectedReels = new Set([0, 2]);
       function reelCards(filter = "All") {
@@ -2110,7 +2068,7 @@
           .filter((x) => filter === "All" || x.r[3] === filter)
           .map(
             ({ r, i }) =>
-              `<div class="reelCard ${selectedReels.has(i) ? "selected" : ""}" onclick="toggleReel(${i},'${filter}')"><div class="reelVisual">▶</div><div class="reelShade"></div><div class="reelTop"><span class="miniTag">REEL</span><span class="miniTag">${r[2]}</span></div><div class="selectDot">${selectedReels.has(i) ? "✓" : "+"}</div><div class="reelMeta"><b>${r[0]}</b><span>${r[1]}</span></div></div>`,
+              `<div class="reelCard ${selectedReels.has(i) ? "selected" : ""}" onclick="toggleReel(${i},'${filter}')"><div class="reelVisual">â–¶</div><div class="reelShade"></div><div class="reelTop"><span class="miniTag">REEL</span><span class="miniTag">${r[2]}</span></div><div class="selectDot">${selectedReels.has(i) ? "âœ“" : "+"}</div><div class="reelMeta"><b>${r[0]}</b><span>${r[1]}</span></div></div>`,
           )
           .join("");
       }
@@ -2129,24 +2087,24 @@
           "Studio",
           "Archive",
         ];
-        let c = `<div class="topbar"><h2>Reels</h2><div><span class="pill">${reels.length} archived reels</span> <button class="btn gold" onclick="openShare()">Share selected (${selectedReels.size})</button></div></div><div class="reelHero"><div class="reelFeature"><div><div class="quote">Short-form archive</div><h1>Moments worth remembering.</h1><p>Keep finished reels, original masters, alternate edits and unpublished moments together — searchable by year, project and theme.</p></div></div><div class="reelSummary"><div class="stat"><b>${reels.length}</b><span>Demo Reels</span></div><div class="stat"><b>6.8 GB</b><span>Collection Size</span></div><div class="stat"><b>2023–26</b><span>Years</span></div><div class="stat"><b>${selectedReels.size}</b><span>Selected</span></div></div></div><div class="toolbar"><input class="search" placeholder="Search reels by title, year, event or tag..."><button class="btn">Newest first</button><button class="btn">☷ Details</button></div><div class="filterChips">${cats.map((x) => `<button class="chip ${x === filter ? "active" : ""}" onclick="renderReels('${x}')">${x}</button>`).join("")}</div><div class="sectionTitle"><h3>${filter === "All" ? "All reels" : filter + " reels"}</h3><span>${filter === "All" ? reels.length : reels.filter((r) => r[3] === filter).length} items • Select any reel to share</span></div><div class="reelGrid">${reelCards(filter)}</div>`;
+        let c = `<div class="topbar"><h2>Reels</h2><div><span class="pill">${reels.length} archived reels</span> <button class="btn gold" onclick="openShare()">Share selected (${selectedReels.size})</button></div></div><div class="reelHero"><div class="reelFeature"><div><div class="quote">Short-form archive</div><h1>Moments worth remembering.</h1><p>Keep finished reels, original masters, alternate edits and unpublished moments together â€” searchable by year, project and theme.</p></div></div><div class="reelSummary"><div class="stat"><b>${reels.length}</b><span>Demo Reels</span></div><div class="stat"><b>6.8 GB</b><span>Collection Size</span></div><div class="stat"><b>2023â€“26</b><span>Years</span></div><div class="stat"><b>${selectedReels.size}</b><span>Selected</span></div></div></div><div class="toolbar"><input class="search" placeholder="Search reels by title, year, event or tag..."><button class="btn">Newest first</button><button class="btn">â˜· Details</button></div><div class="filterChips">${cats.map((x) => `<button class="chip ${x === filter ? "active" : ""}" onclick="renderReels('${x}')">${x}</button>`).join("")}</div><div class="sectionTitle"><h3>${filter === "All" ? "All reels" : filter + " reels"}</h3><span>${filter === "All" ? reels.length : reels.filter((r) => r[3] === filter).length} items â€¢ Select any reel to share</span></div><div class="reelGrid">${reelCards(filter)}</div>`;
         document.getElementById("portal").innerHTML = layout(c, false, "reels");
       }
       function layout(content, admin = false, active = "overview") {
-        return `<div class="shell"><aside class="sidebar"><div class="sideBrand">Rahul <span>Deshpande</span></div><div class="nav"><div class="section">${admin ? "Administration" : "My Archive"}</div><button class="${active === "overview" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderRahul()"}">⌂ &nbsp; Overview</button><button class="${active === "library" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('library')"}">▣ &nbsp; ${admin ? "Media Management" : "My Library"}</button>${!admin ? `<button class="${active === "reels" ? "active" : ""}" onclick="renderReels()">▯ &nbsp; Reels</button><button class="${active === "share" ? "active" : ""}" onclick="renderBasicView('share')">↗ &nbsp; Share</button>` : ""}<button class="${active === "search" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('search')"}">⌕ &nbsp; Search Archive</button><button class="${active === "collections" ? "active" : ""}" onclick="${admin ? "openUploadExperience()" : "renderBasicView('collections')"}">＋ &nbsp; ${admin ? "Upload & Process" : "Collections"}</button><div class="section">Manage</div><button class="${active === "shared" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('shared')"}">↗ &nbsp; Shared Links</button><button class="${active === "activity" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('activity')"}">♙ &nbsp; ${admin ? "Users & Access" : "My Activity"}</button>${admin ? "<button>☷ &nbsp; Categories & Metadata</button><button>◫ &nbsp; Audit Trail</button><button>⚙ &nbsp; System & Storage</button>" : ""}</div><div class="profile">${admin ? "Archive Administrator" : "Rahul Deshpande"}<br><span style="color:#666">Secure session • MFA enabled</span></div></aside><main class="main">${content}</main></div>`;
+        return `<div class="shell"><aside class="sidebar"><div class="sideBrand">Rahul <span>Deshpande</span></div><div class="nav"><div class="section">${admin ? "Administration" : "My Archive"}</div><button class="${active === "overview" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderRahul()"}">âŒ‚ &nbsp; Overview</button><button class="${active === "library" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('library')"}">â–£ &nbsp; ${admin ? "Media Management" : "My Library"}</button>${!admin ? `<button class="${active === "reels" ? "active" : ""}" onclick="renderReels()">â–¯ &nbsp; Reels</button><button class="${active === "share" ? "active" : ""}" onclick="renderBasicView('share')">â†— &nbsp; Share</button>` : ""}<button class="${active === "search" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('search')"}">âŒ• &nbsp; Search Archive</button><button class="${active === "collections" ? "active" : ""}" onclick="${admin ? "openUploadExperience()" : "renderBasicView('collections')"}">ï¼‹ &nbsp; ${admin ? "Upload & Process" : "Collections"}</button><div class="section">Manage</div><button class="${active === "shared" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('shared')"}">â†— &nbsp; Shared Links</button><button class="${active === "activity" ? "active" : ""}" onclick="${admin ? "renderAdmin()" : "renderBasicView('activity')"}">â™™ &nbsp; ${admin ? "Users & Access" : "My Activity"}</button>${admin ? "<button>â˜· &nbsp; Categories & Metadata</button><button>â—« &nbsp; Audit Trail</button><button>âš™ &nbsp; System & Storage</button>" : ""}</div><div class="profile">${admin ? "Archive Administrator" : "Rahul Deshpande"}<br><span style="color:#666">Secure session â€¢ MFA enabled</span></div></aside><main class="main">${content}</main></div>`;
       }
       function renderRahul() {
-        let c = `<div class="topbar"><h2>My Private Archive</h2><div><span class="pill">🔒 Private & encrypted</span> <button class="btn gold" onclick="openShare()">Share securely</button></div></div><section class="welcome"><div><div class="quote">Good morning, Rahul</div><h1>Your creative journey,<br>all in one place.</h1><p>Explore performances, recordings, interviews, films and memories from across your career.</p></div><div style="min-width:180px"><span style="color:#888;font-size:11px">ARCHIVE STORAGE</span><b style="font-family:Georgia,serif;font-size:27px;display:block;margin-top:5px">28.6 TB <small style="font-size:13px;color:#777">/ 80 TB</small></b><div class="progress"><i></i></div></div></section><div class="statrow"><div class="stat"><b>12,842</b><span>Media Assets</span></div><div class="stat"><b>418</b><span>Performances</span></div><div class="stat"><b>286</b><span>Interviews</span></div><div class="stat"><b>14</b><span>Active Shares</span></div></div><div class="toolbar"><input class="search" placeholder="Search a song, performance, interview, year, person or place..."><button class="btn">Filters</button></div><div class="sectionTitle"><h3>Recently added</h3><span>View complete library →</span></div><div class="grid">${mediaCards()}</div>`;
+        let c = `<div class="topbar"><h2>My Private Archive</h2><div><span class="pill">ðŸ”’ Private & encrypted</span> <button class="btn gold" onclick="openShare()">Share securely</button></div></div><section class="welcome"><div><div class="quote">Good morning, Rahul</div><h1>Your creative journey,<br>all in one place.</h1><p>Explore performances, recordings, interviews, films and memories from across your career.</p></div><div style="min-width:180px"><span style="color:#888;font-size:11px">ARCHIVE STORAGE</span><b style="font-family:Georgia,serif;font-size:27px;display:block;margin-top:5px">28.6 TB <small style="font-size:13px;color:#777">/ 80 TB</small></b><div class="progress"><i></i></div></div></section><div class="statrow"><div class="stat"><b>12,842</b><span>Media Assets</span></div><div class="stat"><b>418</b><span>Performances</span></div><div class="stat"><b>286</b><span>Interviews</span></div><div class="stat"><b>14</b><span>Active Shares</span></div></div><div class="toolbar"><input class="search" placeholder="Search a song, performance, interview, year, person or place..."><button class="btn">Filters</button></div><div class="sectionTitle"><h3>Recently added</h3><span>View complete library â†’</span></div><div class="grid">${mediaCards()}</div>`;
         document.getElementById("portal").innerHTML = layout(c, false);
       }
       function renderAdmin() {
-        let c = `<div class="topbar"><h2>Archive Administration</h2><div><span class="pill">System healthy</span> <button class="btn gold">＋ Upload Media</button></div></div><div class="statrow"><div class="stat"><b>28.6 TB</b><span>80 TB Primary Storage</span></div><div class="stat"><b>12,842</b><span>Total Assets</span></div><div class="stat"><b>7</b><span>Authorized Users</span></div><div class="stat"><b>14</b><span>Active Secure Shares</span></div></div><div class="sectionTitle"><h3>Storage & processing</h3><span>Last checked 2 minutes ago</span></div><div class="welcome"><div><h1 style="font-size:30px">Archive infrastructure</h1><p>Primary media storage is healthy. 3 uploads are currently processing and backup replication is up to date.</p></div><div style="min-width:220px"><span style="color:#888;font-size:11px">STORAGE UTILIZATION</span><b style="font-family:Georgia,serif;font-size:25px;display:block">35.8%</b><div class="progress"><i></i></div></div></div><div class="sectionTitle"><h3>Recent activity</h3><span>View audit trail →</span></div><table class="table"><tr><th>Activity</th><th>Asset / User</th><th>Status</th><th>Time</th></tr><tr><td>Upload completed</td><td>Live Concert — Pune.mp4</td><td><span class="badge">Processed</span></td><td>10:42 AM</td></tr><tr><td>Secure link opened</td><td>Interview Collection</td><td><span class="badge">Authorized</span></td><td>09:18 AM</td></tr><tr><td>Media metadata updated</td><td>Studio Rehearsal Sessions</td><td><span class="badge">Saved</span></td><td>Yesterday</td></tr><tr><td>Backup replication</td><td>Archive storage</td><td><span class="badge">Healthy</span></td><td>Yesterday</td></tr></table><div class="sectionTitle"><h3>Media awaiting review</h3><span>3 processing</span></div><div class="grid">${mediaCards().split("</div></div>").slice(0, 4).join("</div></div>")}</div>`;
+        let c = `<div class="topbar"><h2>Archive Administration</h2><div><span class="pill">System healthy</span> <button class="btn gold">ï¼‹ Upload Media</button></div></div><div class="statrow"><div class="stat"><b>28.6 TB</b><span>80 TB Primary Storage</span></div><div class="stat"><b>12,842</b><span>Total Assets</span></div><div class="stat"><b>7</b><span>Authorized Users</span></div><div class="stat"><b>14</b><span>Active Secure Shares</span></div></div><div class="sectionTitle"><h3>Storage & processing</h3><span>Last checked 2 minutes ago</span></div><div class="welcome"><div><h1 style="font-size:30px">Archive infrastructure</h1><p>Primary media storage is healthy. 3 uploads are currently processing and backup replication is up to date.</p></div><div style="min-width:220px"><span style="color:#888;font-size:11px">STORAGE UTILIZATION</span><b style="font-family:Georgia,serif;font-size:25px;display:block">35.8%</b><div class="progress"><i></i></div></div></div><div class="sectionTitle"><h3>Recent activity</h3><span>View audit trail â†’</span></div><table class="table"><tr><th>Activity</th><th>Asset / User</th><th>Status</th><th>Time</th></tr><tr><td>Upload completed</td><td>Live Concert â€” Pune.mp4</td><td><span class="badge">Processed</span></td><td>10:42 AM</td></tr><tr><td>Secure link opened</td><td>Interview Collection</td><td><span class="badge">Authorized</span></td><td>09:18 AM</td></tr><tr><td>Media metadata updated</td><td>Studio Rehearsal Sessions</td><td><span class="badge">Saved</span></td><td>Yesterday</td></tr><tr><td>Backup replication</td><td>Archive storage</td><td><span class="badge">Healthy</span></td><td>Yesterday</td></tr></table><div class="sectionTitle"><h3>Media awaiting review</h3><span>3 processing</span></div><div class="grid">${mediaCards().split("</div></div>").slice(0, 4).join("</div></div>")}</div>`;
         document.getElementById("portal").innerHTML = layout(c, true);
       }
       function openShare() {
         document.body.insertAdjacentHTML(
           "beforeend",
-          `<div id="shareModal" class="modal"><div class="modalbox"><div class="quote">Secure sharing</div><h3>Share selected collection</h3><p class="sub">Create a protected, time-limited link. Access can be revoked at any time.</p><div class="field"><label>Collection name</label><input value="Selected Performances & Interviews"></div><div class="modalrow"><div class="field"><label>Password</label><input value="RD2026"></div><div class="field"><label>Expires after</label><select><option>7 days</option><option>24 hours</option><option>3 days</option><option>30 days</option></select></div></div><div class="modalrow"><div class="field"><label>Download</label><select><option>Not allowed</option><option>Allowed</option></select></div><div class="field"><label>Maximum access</label><select><option>Unlimited until expiry</option><option>1 view</option><option>5 views</option></select></div></div><div style="background:#101012;border:1px solid #29292d;border-radius:11px;padding:12px;color:#888;font-size:12px">3 items selected • Access will be logged • Link can be revoked instantly</div><div class="modalActions"><button class="btn" onclick="document.getElementById('shareModal').remove()">Cancel</button><button class="btn gold" onclick="createdShare()">Generate Secure Link</button></div></div></div>`,
+          `<div id="shareModal" class="modal"><div class="modalbox"><div class="quote">Secure sharing</div><h3>Share selected collection</h3><p class="sub">Create a protected, time-limited link. Access can be revoked at any time.</p><div class="field"><label>Collection name</label><input value="Selected Performances & Interviews"></div><div class="modalrow"><div class="field"><label>Password</label><input value="RD2026"></div><div class="field"><label>Expires after</label><select><option>7 days</option><option>24 hours</option><option>3 days</option><option>30 days</option></select></div></div><div class="modalrow"><div class="field"><label>Download</label><select><option>Not allowed</option><option>Allowed</option></select></div><div class="field"><label>Maximum access</label><select><option>Unlimited until expiry</option><option>1 view</option><option>5 views</option></select></div></div><div style="background:#101012;border:1px solid #29292d;border-radius:11px;padding:12px;color:#888;font-size:12px">3 items selected â€¢ Access will be logged â€¢ Link can be revoked instantly</div><div class="modalActions"><button class="btn" onclick="document.getElementById('shareModal').remove()">Cancel</button><button class="btn gold" onclick="createdShare()">Generate Secure Link</button></div></div></div>`,
         );
       }
       function createdShare() {
@@ -2165,7 +2123,7 @@
           project: "Live Performances",
           year: "2026",
           size: "186 MB",
-          master: "MOV · ProRes 422 · 4K · 2.84 GB",
+          master: "MOV Â· ProRes 422 Â· 4K Â· 2.84 GB",
           tags: ["Classical", "Live", "Pune", "Performance"],
         },
         {
@@ -2173,7 +2131,7 @@
           project: "Behind the Scenes",
           year: "2026",
           size: "94 MB",
-          master: "MOV · HEVC · 4K · 1.62 GB",
+          master: "MOV Â· HEVC Â· 4K Â· 1.62 GB",
           tags: ["Riyaz", "Backstage", "Music", "Private"],
         },
         {
@@ -2181,7 +2139,7 @@
           project: "Conversations",
           year: "2025",
           size: "128 MB",
-          master: "MOV · ProRes 422 · 4K · 3.12 GB",
+          master: "MOV Â· ProRes 422 Â· 4K Â· 3.12 GB",
           tags: ["Interview", "Legacy", "Archive"],
         },
         {
@@ -2189,7 +2147,7 @@
           project: "Studio Sessions",
           year: "2026",
           size: "214 MB",
-          master: "MOV · ProRes 422 HQ · 4K · 4.26 GB",
+          master: "MOV Â· ProRes 422 HQ Â· 4K Â· 4.26 GB",
           tags: ["Studio", "Composition", "Music"],
         },
       ];
@@ -2203,7 +2161,7 @@
           d = mediaSamples[idx];
         document.getElementById("detailTitle").textContent = title.trim();
         document.getElementById("detailEyebrow").textContent =
-          "REEL · " + d.type.toUpperCase();
+          "REEL Â· " + d.type.toUpperCase();
         document.getElementById("detailProject").textContent = d.project;
         document.getElementById("detailYear").textContent = d.year;
         document.getElementById("detailCategory").textContent =
@@ -2212,7 +2170,7 @@
         document.getElementById("detailAsset").textContent =
           "RD-RL-" + d.year + "-" + String(idx + 142).padStart(4, "0");
         document.getElementById("masterMeta").innerHTML =
-          d.master + "<br>Checksum verified · Original preserved unchanged";
+          d.master + "<br>Checksum verified Â· Original preserved unchanged";
         document.getElementById("detailTags").innerHTML = d.tags
           .map((x) => '<span class="tag">' + x + "</span>")
           .join("");
@@ -2226,8 +2184,8 @@
       function toggleDemoPlay(e) {
         e.stopPropagation();
         let b = document.getElementById("playBtn"),
-          p = b.textContent === "❚❚";
-        b.textContent = p ? "▶" : "❚❚";
+          p = b.textContent === "âšâš";
+        b.textContent = p ? "â–¶" : "âšâš";
         document.getElementById("demoProgress").style.width = p ? "36%" : "62%";
         document.getElementById("playTime").textContent = p
           ? "00:18 / 00:52"
@@ -2287,7 +2245,7 @@
         document.getElementById("overallLabel").textContent =
           "Secure resumable upload";
         document.getElementById("speedText").textContent =
-          "184 MB/s · 8 parallel encrypted parts";
+          "184 MB/s Â· 8 parallel encrypted parts";
         document.getElementById("etaText").textContent =
           "Demo acceleration enabled";
         uploadTimer = setInterval(() => {
@@ -2335,7 +2293,7 @@
         document.getElementById("overallPct").textContent = "Processing";
         document.getElementById("speedText").textContent =
           step === 4
-            ? "Media worker · 16 vCPU processing"
+            ? "Media worker Â· 16 vCPU processing"
             : "Background worker processing";
         document.getElementById("etaText").textContent =
           "Original master remains protected";
@@ -2360,7 +2318,7 @@
             library: {
               eyebrow: "MY LIBRARY",
               title: "Everything, beautifully organised",
-              desc: "Browse Rahul’s private archive across music, performances, interviews, theatre, reels, photographs and documents.",
+              desc: "Browse Rahulâ€™s private archive across music, performances, interviews, theatre, reels, photographs and documents.",
             },
             share: {
               eyebrow: "SECURE SHARING",
@@ -2390,7 +2348,7 @@
           },
           d = data[kind];
         document.getElementById("portal").innerHTML = layout(
-          `<main class="main"><div class="topbar"><div><div class="eyebrow">${d.eyebrow}</div><h1 style="margin:4px 0 0">${d.title}</h1></div><div class="topActions"><button class="btn" onclick="toggleTheme()">◐ Theme</button><button class="btn primary" onclick="openUploadExperience()">＋ Upload Master</button></div></div><div class="hero" style="min-height:150px"><div><div class="eyebrow">${d.eyebrow}</div><h2>${d.title}</h2><p>${d.desc}</p></div></div>${basicViewBody(kind)}</main>`,
+          `<main class="main"><div class="topbar"><div><div class="eyebrow">${d.eyebrow}</div><h1 style="margin:4px 0 0">${d.title}</h1></div><div class="topActions"><button class="btn" onclick="toggleTheme()">â— Theme</button><button class="btn primary" onclick="openUploadExperience()">ï¼‹ Upload Master</button></div></div><div class="hero" style="min-height:150px"><div><div class="eyebrow">${d.eyebrow}</div><h2>${d.title}</h2><p>${d.desc}</p></div></div>${basicViewBody(kind)}</main>`,
           false,
           kind,
         );
@@ -2404,57 +2362,57 @@
           return (
             hero(
               "PERSONAL MEDIA VAULT",
-              "Your life’s work, in one place.",
+              "Your lifeâ€™s work, in one place.",
               "Browse original masters, viewing copies, photographs, recordings and documents across your career.",
               mm("24,860", "Assets") +
                 mm("31.6 TB", "Used") +
                 mm("100%", "Protected"),
             ) +
-            `<div class="pTool"><input class="pSearch" placeholder="⌕  Search title, project, year, person or tag..."><button class="btn">All media⌄</button><button class="btn">Newest first⌄</button></div><div class="sectionTitle"><h3>Explore your archive</h3><span>8 media spaces</span></div><div class="pGrid4">${[
+            `<div class="pTool"><input class="pSearch" placeholder="âŒ•  Search title, project, year, person or tag..."><button class="btn">All mediaâŒ„</button><button class="btn">Newest firstâŒ„</button></div><div class="sectionTitle"><h3>Explore your archive</h3><span>8 media spaces</span></div><div class="pGrid4">${[
               [
-                "♫",
+                "â™«",
                 "Music & Songs",
                 "6,420",
                 "Studio recordings, compositions and audio masters",
               ],
               [
-                "▶",
+                "â–¶",
                 "Concerts & Performances",
                 "1,284",
                 "Full performances, excerpts and stage recordings",
               ],
               [
-                "◉",
+                "â—‰",
                 "Interviews",
                 "846",
                 "Television, press, podcasts and conversations",
               ],
               [
-                "▯",
+                "â–¯",
                 "Reels & Social",
                 "3,921",
                 "Published reels, alternates and social edits",
               ],
               [
-                "▣",
+                "â–£",
                 "Photographs",
                 "9,108",
                 "Portraits, events and archival photographs",
               ],
               [
-                "✦",
+                "âœ¦",
                 "Theatre & Acting",
                 "742",
                 "Films, theatre, scripts and performance material",
               ],
               [
-                "◇",
+                "â—‡",
                 "Press & Publicity",
                 "1,964",
                 "Articles, posters, artwork and coverage",
               ],
               [
-                "☷",
+                "â˜·",
                 "Documents & Projects",
                 "575",
                 "Project files, lyrics and important documents",
@@ -2476,22 +2434,22 @@
                 mm("7 days", "Expiry") +
                 mm("Private", "Access"),
             ) +
-            `<div class="twoCol"><div class="pPanel"><div class="stepHead"><span class="stepNo">1</span><strong>Selected media</strong><span style="margin-left:auto;color:var(--gold);font-size:10px">＋ Add from Library</span></div>${[
+            `<div class="twoCol"><div class="pPanel"><div class="stepHead"><span class="stepNo">1</span><strong>Selected media</strong><span style="margin-left:auto;color:var(--gold);font-size:10px">ï¼‹ Add from Library</span></div>${[
               [
-                "▶",
-                "An Evening in Pune — Performance",
-                "Viewing copy · 186 MB",
+                "â–¶",
+                "An Evening in Pune â€” Performance",
+                "Viewing copy Â· 186 MB",
               ],
-              ["▣", "Performance Portrait — Selected", "JPG · 18.4 MB"],
-              ["♫", "Studio Recording — Preview", "Audio · 42 MB"],
+              ["â–£", "Performance Portrait â€” Selected", "JPG Â· 18.4 MB"],
+              ["â™«", "Studio Recording â€” Preview", "Audio Â· 42 MB"],
             ]
               .map(
                 (x) =>
-                  `<div class="selectedRow"><div class="smallThumb">${x[0]}</div><div class="grow"><strong>${x[1]}</strong><span>${x[2]}</span></div><span>×</span></div>`,
+                  `<div class="selectedRow"><div class="smallThumb">${x[0]}</div><div class="grow"><strong>${x[1]}</strong><span>${x[2]}</span></div><span>Ã—</span></div>`,
               )
               .join(
                 "",
-              )}<div class="stepHead" style="margin-top:20px"><span class="stepNo">2</span><strong>Recipient & protection</strong></div><div class="form2"><label>Recipient / Purpose<input placeholder="e.g. Production Team"></label><label>Email · Optional<input placeholder="name@example.com"></label><label>Password<input value="RD2026"></label><label>Link expires<select><option>7 days</option><option>24 hours</option><option>30 days</option></select></label></div><div class="permRow"><span>View in browser</span><span class="statusPill">ALLOWED</span></div><div class="permRow"><span>Download viewing copy</span><span class="statusPill">ALLOWED</span></div><div class="permRow"><span>Download original master</span><span class="statusPill muted">NOT ALLOWED</span></div><button class="btn primary" style="width:100%;margin-top:16px;padding:13px" onclick="toast('Secure share link generated — demo')">Generate Secure Link ↗</button></div><div class="pPanel"><div class="eyebrow" style="margin-bottom:12px">RECIPIENT PREVIEW</div><div class="previewBox"><div class="rdMark">RD</div><small>PRIVATE SHARE FROM</small><h3>Rahul Deshpande</h3><p>3 carefully selected archive items have been shared with you.</p><div class="filterBar" style="justify-content:center"><span class="tag">3 items</span><span class="tag">7 days</span><span class="tag">Password</span></div><button class="btn primary" style="width:100%" onclick="showShare()">Preview Recipient Experience</button></div></div></div>`
+              )}<div class="stepHead" style="margin-top:20px"><span class="stepNo">2</span><strong>Recipient & protection</strong></div><div class="form2"><label>Recipient / Purpose<input placeholder="e.g. Production Team"></label><label>Email Â· Optional<input placeholder="name@example.com"></label><label>Password<input value="RD2026"></label><label>Link expires<select><option>7 days</option><option>24 hours</option><option>30 days</option></select></label></div><div class="permRow"><span>View in browser</span><span class="statusPill">ALLOWED</span></div><div class="permRow"><span>Download viewing copy</span><span class="statusPill">ALLOWED</span></div><div class="permRow"><span>Download original master</span><span class="statusPill muted">NOT ALLOWED</span></div><button class="btn primary" style="width:100%;margin-top:16px;padding:13px" onclick="toast('Secure share link generated â€” demo')">Generate Secure Link â†—</button></div><div class="pPanel"><div class="eyebrow" style="margin-bottom:12px">RECIPIENT PREVIEW</div><div class="previewBox"><div class="rdMark">RD</div><small>PRIVATE SHARE FROM</small><h3>Rahul Deshpande</h3><p>3 carefully selected archive items have been shared with you.</p><div class="filterBar" style="justify-content:center"><span class="tag">3 items</span><span class="tag">7 days</span><span class="tag">Password</span></div><button class="btn primary" style="width:100%" onclick="showShare()">Preview Recipient Experience</button></div></div></div>`
           );
         if (kind === "search")
           return (
@@ -2503,26 +2461,26 @@
                 mm("8", "Media Types") +
                 mm("<1 sec", "Demo Search"),
             ) +
-            `<div class="pPanel"><div style="display:flex;gap:9px"><input class="pSearch" style="flex:1" value="Vasantotsav Pune" placeholder="What are you looking for?"><button class="btn primary" onclick="toast('Archive search completed — demo')">Search Archive</button></div><div class="filterBar"><button class="chip active">Everything</button><button class="chip">Video</button><button class="chip">Audio</button><button class="chip">Photos</button><button class="chip">Interviews</button><button class="chip">2026</button></div><div class="eyebrow">TOP RESULTS · 18 FOUND</div>${[
+            `<div class="pPanel"><div style="display:flex;gap:9px"><input class="pSearch" style="flex:1" value="Vasantotsav Pune" placeholder="What are you looking for?"><button class="btn primary" onclick="toast('Archive search completed â€” demo')">Search Archive</button></div><div class="filterBar"><button class="chip active">Everything</button><button class="chip">Video</button><button class="chip">Audio</button><button class="chip">Photos</button><button class="chip">Interviews</button><button class="chip">2026</button></div><div class="eyebrow">TOP RESULTS Â· 18 FOUND</div>${[
               [
-                "▶",
-                "Vasantotsav — Pune Evening Performance",
-                "Concert · 2026 · 4K Master + Viewing Copy",
+                "â–¶",
+                "Vasantotsav â€” Pune Evening Performance",
+                "Concert Â· 2026 Â· 4K Master + Viewing Copy",
               ],
               [
-                "▯",
+                "â–¯",
                 "Backstage before Vasantotsav",
-                "Reel · 2026 · Behind the scenes",
+                "Reel Â· 2026 Â· Behind the scenes",
               ],
               [
-                "▣",
+                "â–£",
                 "Vasantotsav Portrait Selection",
-                "Photography · 2026 · 48 images",
+                "Photography Â· 2026 Â· 48 images",
               ],
               [
-                "♫",
-                "Live Audio — Pune Performance",
-                "Audio · 2026 · WAV Master",
+                "â™«",
+                "Live Audio â€” Pune Performance",
+                "Audio Â· 2026 Â· WAV Master",
               ],
             ]
               .map(
@@ -2541,51 +2499,51 @@
                 mm("802", "Items") +
                 mm("0", "Duplicates"),
             ) +
-            `<div class="pTool"><input class="pSearch" placeholder="⌕  Find a collection..."><button class="btn primary" onclick="toast('New collection — demo')">＋ New Collection</button><button class="btn">Recently updated⌄</button></div><div class="pGrid4">${[
+            `<div class="pTool"><input class="pSearch" placeholder="âŒ•  Find a collection..."><button class="btn primary" onclick="toast('New collection â€” demo')">ï¼‹ New Collection</button><button class="btn">Recently updatedâŒ„</button></div><div class="pGrid4">${[
               [
-                "✦",
+                "âœ¦",
                 "Career Highlights",
                 "128",
                 "A personal selection of defining performances and moments",
               ],
               [
-                "♫",
+                "â™«",
                 "Vasantotsav",
                 "364",
                 "Performances, backstage, photographs and press",
               ],
               [
-                "◉",
+                "â—‰",
                 "Press & Interviews",
                 "218",
                 "Selected conversations, interviews and media coverage",
               ],
               [
-                "▶",
+                "â–¶",
                 "Favourite Performances",
                 "92",
-                "Rahul’s personally marked performance collection",
+                "Rahulâ€™s personally marked performance collection",
               ],
               [
-                "▣",
+                "â–£",
                 "Portrait Selection",
                 "146",
                 "Curated portraits for approved publicity use",
               ],
               [
-                "◇",
+                "â—‡",
                 "Legacy Archive",
                 "74",
                 "Important historical and family archive material",
               ],
               [
-                "♫",
+                "â™«",
                 "Studio Sessions",
                 "61",
                 "Recording sessions, alternates and masters",
               ],
               [
-                "＋",
+                "ï¼‹",
                 "Create Collection",
                 "",
                 "Build a new collection from any archive items",
@@ -2605,39 +2563,39 @@
               "Track active links, recipient access, expiry and downloads. Revoke access instantly whenever required.",
               mm("3", "Active") + mm("12", "Expired") + mm("7", "Views"),
             ) +
-            `<div class="pPanel"><div class="sectionTitle" style="margin-top:0"><h3>Active secure links</h3><span>Manage all →</span></div>${[
+            `<div class="pPanel"><div class="sectionTitle" style="margin-top:0"><h3>Active secure links</h3><span>Manage all â†’</span></div>${[
               [
                 "Concert Selection",
                 "Production Team",
-                "3 items · Opened 2 times",
+                "3 items Â· Opened 2 times",
                 "Expires in 4 days",
               ],
               [
                 "Interview Clips",
                 "Media Partner",
-                "6 items · Opened 2 times",
+                "6 items Â· Opened 2 times",
                 "Expires tomorrow",
               ],
               [
                 "Press Photos",
                 "Event Team",
-                "12 items · Not opened",
+                "12 items Â· Not opened",
                 "Expires in 6 days",
               ],
             ]
               .map(
                 (x, i) =>
-                  `<div class="listRow"><div class="smallThumb">↗</div><div class="grow"><strong>${x[0]} · ${x[1]}</strong><span>${x[2]}</span></div><span class="statusPill ${i === 1 ? "gold" : ""}">${x[3]}</span><button class="btn" onclick="toast('Link revoked — demo')">Revoke</button></div>`,
+                  `<div class="listRow"><div class="smallThumb">â†—</div><div class="grow"><strong>${x[0]} Â· ${x[1]}</strong><span>${x[2]}</span></div><span class="statusPill ${i === 1 ? "gold" : ""}">${x[3]}</span><button class="btn" onclick="toast('Link revoked â€” demo')">Revoke</button></div>`,
               )
               .join(
                 "",
               )}</div><div class="sectionTitle"><h3>Recently expired</h3><span>View history</span></div><div class="pPanel">${[
-              ["Award Photos — PR Agency", "Expired 24 Sep · 4 views"],
-              ["Studio Preview — Production", "Expired 18 Sep · 1 view"],
+              ["Award Photos â€” PR Agency", "Expired 24 Sep Â· 4 views"],
+              ["Studio Preview â€” Production", "Expired 18 Sep Â· 1 view"],
             ]
               .map(
                 (x) =>
-                  `<div class="listRow"><div class="smallThumb">⌛</div><div class="grow"><strong>${x[0]}</strong><span>${x[1]}</span></div><span class="statusPill muted">EXPIRED</span></div>`,
+                  `<div class="listRow"><div class="smallThumb">âŒ›</div><div class="grow"><strong>${x[0]}</strong><span>${x[1]}</span></div><span class="statusPill muted">EXPIRED</span></div>`,
               )
               .join("")}</div>`
           );
@@ -2651,33 +2609,33 @@
           `<div class="twoCol"><div class="pPanel"><div class="sectionTitle" style="margin-top:0"><h3>Activity timeline</h3><span>Today</span></div><div class="timeline">${[
             [
               "Master upload completed",
-              "Evening Performance — Pune · 42.8 GB",
-              "Today · 11:42",
+              "Evening Performance â€” Pune Â· 42.8 GB",
+              "Today Â· 11:42",
             ],
             [
               "Secure link created",
               "Concert Selection shared with Production Team",
-              "Today · 10:18",
+              "Today Â· 10:18",
             ],
             [
               "Media viewed",
-              "An Evening in Pune — viewing copy",
-              "Yesterday · 21:06",
+              "An Evening in Pune â€” viewing copy",
+              "Yesterday Â· 21:06",
             ],
             [
               "Viewing copy downloaded",
-              "Studio Session — Preview",
-              "Yesterday · 17:31",
+              "Studio Session â€” Preview",
+              "Yesterday Â· 17:31",
             ],
             [
               "Collection updated",
               "8 items added to Career Highlights",
-              "30 Sep · 14:22",
+              "30 Sep Â· 14:22",
             ],
             [
               "Security",
               "Successful login from recognised device",
-              "30 Sep · 09:04",
+              "30 Sep Â· 09:04",
             ],
           ]
             .map(
@@ -2698,7 +2656,7 @@
       <div class="media-shell">
         <div class="media-top">
           <div class="crumb">Private Archive / Reels / Media Detail</div>
-          <button class="round-close" onclick="closeMediaDetail()">×</button>
+          <button class="round-close" onclick="closeMediaDetail()">Ã—</button>
         </div>
         <div class="media-grid">
           <div class="player-zone">
@@ -2709,19 +2667,19 @@
                   onclick="toggleDemoPlay(event)"
                   id="playBtn"
                 >
-                  ▶
+                  â–¶
                 </div>
               </div>
               <div class="player-controls">
                 <div class="progress"><i id="demoProgress"></i></div>
                 <div class="control-row">
                   <span id="playTime">00:18 / 00:52</span
-                  ><span>1080p Viewing Copy · ⛶</span>
+                  ><span>1080p Viewing Copy Â· â›¶</span>
                 </div>
               </div>
             </div>
             <div class="detail-copy">
-              <div class="eyebrow" id="detailEyebrow">REEL · CONCERT</div>
+              <div class="eyebrow" id="detailEyebrow">REEL Â· CONCERT</div>
               <h2 id="detailTitle">An Evening in Pune</h2>
               <p>
                 The viewing copy is optimized for instant playback while the
@@ -2733,16 +2691,16 @@
           <aside class="detail-side">
             <div class="side-actions">
               <button class="btn primary" onclick="shareFromDetail()">
-                ↗ Share Securely
+                â†— Share Securely
               </button>
 
               <button
                 class="btn"
-                onclick="toast('Viewing copy download started — demo')"
+                onclick="toast('Viewing copy download started â€” demo')"
               >
-                ↓ Download</button
+                â†“ Download</button
               ><button class="btn" onclick="toast('Added to favourites')">
-                ♡ Favourite
+                â™¡ Favourite
               </button>
             </div>
             <div class="info-section">
@@ -2775,7 +2733,7 @@
                   ><span class="master-badge">READY</span>
                 </div>
                 <div class="master-meta">
-                  MP4 · H.264 · 1080 × 1920 · 12 Mbps<br />Optimized for secure
+                  MP4 Â· H.264 Â· 1080 Ã— 1920 Â· 12 Mbps<br />Optimized for secure
                   browser playback
                 </div>
               </div>
@@ -2785,7 +2743,7 @@
                   ><span class="master-badge">PROTECTED</span>
                 </div>
                 <div class="master-meta" id="masterMeta">
-                  MOV · ProRes 422 · 4K · 2.84 GB<br />Checksum verified ·
+                  MOV Â· ProRes 422 Â· 4K Â· 2.84 GB<br />Checksum verified Â·
                   Original preserved unchanged
                 </div>
               </div>
@@ -2822,7 +2780,7 @@
       </div>
     </div>
     <button class="upload-shortcut" onclick="openUpload()">
-      ＋ Upload Master
+      ï¼‹ Upload Master
     </button>
     <div
       class="upload-modal"
@@ -2835,16 +2793,16 @@
             <div class="eyebrow">INGEST TO PRIVATE ARCHIVE</div>
             <h2>Upload & Process Master</h2>
           </div>
-          <button class="round-close" onclick="closeUpload()">×</button>
+          <button class="round-close" onclick="closeUpload()">Ã—</button>
         </div>
         <div class="upload-grid">
           <section class="upload-left">
             <div class="dropzone" onclick="chooseDemoFile()">
-              <div class="drop-icon">⇧</div>
+              <div class="drop-icon">â‡§</div>
               <h3>Drop a master file here</h3>
               <p>
                 Large files use resumable multipart upload.<br />Demo supports
-                the complete 20–50 GB processing journey.
+                the complete 20â€“50 GB processing journey.
               </p>
               <button class="btn" style="margin-top: 14px">
                 Choose master file
@@ -2854,14 +2812,14 @@
               <div class="file-icon">4K</div>
               <div class="file-info">
                 <strong>Vasantotsav_2026_Full_Performance_MASTER.mov</strong
-                ><span>42.8 GB · ProRes 422 HQ · 4K · Original Master</span>
+                ><span>42.8 GB Â· ProRes 422 HQ Â· 4K Â· Original Master</span>
               </div>
               <span class="master-badge">SELECTED</span>
             </div>
             <div class="meta-form">
               <div class="span2">
                 <label>Title</label
-                ><input value="Vasantotsav 2026 — Full Performance" />
+                ><input value="Vasantotsav 2026 â€” Full Performance" />
               </div>
               <div>
                 <label>Category</label
@@ -2884,7 +2842,7 @@
               <div>
                 <label>Access</label
                 ><select>
-                  <option>Private — Rahul only</option>
+                  <option>Private â€” Rahul only</option>
                   <option>Admin + Rahul</option>
                 </select>
               </div>
@@ -2925,7 +2883,7 @@
               </div>
               <div class="big-progress"><i id="overallBar"></i></div>
               <div class="speed-row">
-                <span id="speedText">Ready · encrypted connection</span
+                <span id="speedText">Ready Â· encrypted connection</span
                 ><span id="etaText">42.8 GB selected</span>
               </div>
             </div>
@@ -2935,7 +2893,7 @@
                 <div class="pipe-main">
                   <b>Resumable multipart upload</b
                   ><span
-                    >Encrypted chunks · automatic resume after
+                    >Encrypted chunks Â· automatic resume after
                     interruption</span
                   >
                 </div>
@@ -2973,7 +2931,7 @@
                 <div class="pipe-main">
                   <b>Viewing copy generation</b
                   ><span
-                    >Optimized 1080p streaming proxy · master remains
+                    >Optimized 1080p streaming proxy Â· master remains
                     untouched</span
                   >
                 </div>
@@ -3002,7 +2960,7 @@
                 <div class="step-state">Queued</div>
               </div>
               <div class="pipe-step" data-step="7">
-                <div class="step-dot">✓</div>
+                <div class="step-dot">âœ“</div>
                 <div class="pipe-main">
                   <b>Ready in Archive</b
                   ><span
@@ -3013,11 +2971,11 @@
               </div>
             </div>
             <div class="ready-banner" id="readyBanner">
-              <div class="step-dot">✓</div>
+              <div class="step-dot">âœ“</div>
               <div>
                 <strong>Master safely added to Rahul's archive</strong
                 ><span
-                  >Original protected · viewing copy ready · backup policy
+                  >Original protected Â· viewing copy ready Â· backup policy
                   applied</span
                 >
               </div>
@@ -3028,3 +2986,4 @@
     </div>
   </body>
 </html>
+
